@@ -168,7 +168,7 @@ class AVaultBase:
                 vault_password=vault_password_flag,
                 command=self.command,
                 vault_file=vault_file_path,
-            ),stderr=subprocess.STDOUT, shell=True, cwd=self.cwd)
+            ),stderr=subprocess.STDOUT, shell=True, cwd=self.cwd, env=get_setting("env", None))
             
         except subprocess.CalledProcessError as e:
             sublime.error_message(e.output.decode('utf-8'))

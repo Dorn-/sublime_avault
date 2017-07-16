@@ -25,4 +25,12 @@
      * does.
      */
     "password": "",
+    
+    /**
+     * Plain text string of your ansible virtualenv.
+     *
+     * This can also be specified on a project by project basis.
+     *
+     */
+    "env": "",
 }
