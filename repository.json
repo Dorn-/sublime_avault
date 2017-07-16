@@ -1,0 +1,21 @@
+{
+	"schema_version": "3.0.0",
+	"packages": [
+		{
+			"name": "Avault",
+			"details": "https://github.com/Dorn-/sublime_avault",
+            "issues": "https://github.com/Dorn-/sublime_avault/issues",
+            "author": "Flavien Chantelot",
+            "donate": "https://gratipay.com/Dorn-/",
+            "readme": "https://raw.githubusercontent.com/Dorn-/sublime_avault/master/readme.md",
+            "labels": ["ansible", "vault", "password"],
+			"releases": [
+				{
+					"sublime_text": ">=3000",
+                    "platforms": ["osx", "linux"],
+					"tags": true
+				}
+			]
+		}
+	]
+}

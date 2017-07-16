@@ -1,0 +1,35 @@
+[{
+    "id": "tools",
+    "children": [{
+        "id": "end"
+    }, {
+        "caption": "AVault",
+        "children": [{
+            "caption": "View",
+            "command": "avault_view"
+        }, {
+            "caption": "Decrypt",
+            "command": "avault_decrypt"
+        }, {
+            "caption": "Encrypt",
+            "command": "avault_encrypt"
+        }]
+    }]
+}, {
+    "id": "preferences",
+    "children": [{
+        "id": "package-settings",
+        "children": [{
+            "caption": "AVault",
+            "children": [{
+                "caption": "Settings - Default",
+                "command": "open_file",
+                "args": {"file": "${packages}/avault/AVault.sublime-settings"}
+            }, {
+                "caption": "Settings - User",
+                "command": "open_file",
+                "args": {"file": "${packages}/User/AVault.sublime-settings"}
+            }]
+        }]
+    }]
+}]
