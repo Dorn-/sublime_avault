@@ -13,7 +13,7 @@ except ImportError:
 
 log = logging.getLogger(__name__)
 
-ANSIBLE_COMMAND_TEMPLATE = '/usr/local/bin/ansible-vault {vault_password} {command} "{vault_file}"'
+ANSIBLE_COMMAND_TEMPLATE = 'ansible-vault {vault_password} {command} "{vault_file}"'
 
 
 ########################################################
@@ -164,11 +164,16 @@ class AVaultBase:
             vault_password_flag = ''
 
         try:
+            env = get_setting("env", None)
+            if env is not None and env is not "":
+                env = {"PATH": env}
+            else:
+                env = {"PATH": "/usr/local/bin"}
             output = subprocess.check_output(ANSIBLE_COMMAND_TEMPLATE.format(
                 vault_password=vault_password_flag,
                 command=self.command,
                 vault_file=vault_file_path,
-            ),stderr=subprocess.STDOUT, shell=True, cwd=self.cwd, env=get_setting("env", None))
+            ),stderr=subprocess.STDOUT, shell=True, cwd=self.cwd, env=env)
             
         except subprocess.CalledProcessError as e:
             sublime.error_message(e.output.decode('utf-8'))

@@ -24,10 +24,10 @@
      * option exposes no extra security risks than having a password file
      * does.
      */
-    "password": "",
+    "password": "yolo",
     
     /**
-     * Plain text string of your ansible virtualenv.
+     * Plain text string of your ansible virtualenv binary folder.
      *
      * This can also be specified on a project by project basis.
      *
